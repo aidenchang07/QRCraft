@@ -1,4 +1,4 @@
-package com.aiden.qrcraft.ui.theme
+package com.aiden.qrcraft.ui.util
 
 import androidx.compose.material3.windowsizeclass.WindowSizeClass
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
