@@ -10,12 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QRCraft">
+        android:theme="@style/Theme.QRCraft"> <!-- 不用給 SplashScreen 主題，其他 Activity 若未指定主題，會自動繼承 Application 的主題 -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.QRCraft">
+            android:theme="@style/Theme.QRCraft.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

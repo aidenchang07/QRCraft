@@ -59,4 +59,7 @@ dependencies {
 
     // WindowSizeClass 響應式 UI
     implementation("androidx.compose.material3:material3-window-size-class:1.4.0")
+
+    // 啟動畫面
+    implementation("androidx.core:core-splashscreen:1.2.0")
 }
