@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.aiden.qrcraft.presentation.ScanRoot
 import com.aiden.qrcraft.ui.theme.QRCraftTheme
 
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
@@ -28,6 +29,7 @@ class MainActivity : ComponentActivity() {
 
             QRCraftTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    ScanRoot()
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)

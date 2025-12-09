@@ -62,4 +62,8 @@ dependencies {
 
     // 啟動畫面
     implementation("androidx.core:core-splashscreen:1.2.0")
+
+    // koin di
+    implementation("io.insert-koin:koin-android:4.1.0")
+    implementation("io.insert-koin:koin-androidx-compose:4.1.0")
 }
