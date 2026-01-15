@@ -1,6 +1,9 @@
 package com.aiden.qrcraft.presentation
 
+import android.content.pm.ActivityInfo
+import androidx.activity.compose.LocalActivity
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -15,6 +18,19 @@ fun ScanRoot(
     viewModel: ScanViewModel = koinViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val activity = LocalActivity.current
+
+    DisposableEffect(Unit) {
+        activity?.let { activity ->
+            // 保持畫面直立
+            activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            onDispose {
+                // 取消畫面直立（可旋轉）
+                activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+            }
+        } ?: onDispose { }
+    }
+
     ScanScreen(uiState)
 }
 
