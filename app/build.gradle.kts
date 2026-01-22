@@ -36,6 +36,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -66,4 +67,7 @@ dependencies {
     // koin di
     implementation("io.insert-koin:koin-android:4.1.0")
     implementation("io.insert-koin:koin-androidx-compose:4.1.0")
+
+    // Timber logger
+    implementation("com.jakewharton.timber:timber:5.0.1")
 }
